@@ -12,6 +12,7 @@ app.listen(5000, ()=> console.log('server running on 5000'))
 
 mongoose.connect('mongodb://localhost:27017/sample')
     .then(()=> console.log('database connected..'))
+    serverSelectionTimeoutMS: 50000, // 30 seconds
     .catch((err) => console.log(err))
 
 
